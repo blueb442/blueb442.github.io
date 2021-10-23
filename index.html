@@ -1,13 +1,320 @@
 <head>
 
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/160c6362db.js" crossorigin="anonymous"></script>
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+    .body {
+        margin: 0px!important;
+       background-color: rgb(10, 10, 10); 
+    }
+
+    .head2 {
+        font-family: Commissioner;
+    }
+    .head1 {
+        font-family: Fira Code;
+        margin-left: 15px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        display: inline-grid;
+    }
+    .muted {
+        color: rgb(131, 131, 131);
+        display: inline-grid;
+    }
+    .divider {
+        height: 23px;
+        width: 1px;
+        background-color: rgb(95, 95, 95);
+        margin-bottom: -6px;
+        margin-left: 15px;
+        display: inline-grid;
+    }
+    .readme {
+        margin: 20px;
+        border-radius: 8px;
+        border: 1px solid rgb(43, 43, 43);
+        color: rgb(189, 189, 189);
+
+    }
+    .filename {
+        border-bottom: 1px solid rgb(43, 43, 43);
+        color: rgb(189, 189, 189);
+        background-color: rgb(19, 19, 19);
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+    }
+    .subhead2 {
+        margin-top: -20px;
+        font-family: Commissioner;
+        font-size: 14px;
+    }
+    .divider2 {
+        height: 1px;
+        width: 350px;
+        margin-top: -8px;
+        background-color: rgb(95, 95, 95);
+    }
+    .links {
+        display: inline-grid;
+        font-family: Fira Code;
+        color: rgb(81, 104, 233);
+    }
+    .links:hover {
+        display: inline-grid;
+        font-family: Fira Code;
+        color: rgb(67, 85, 190);
+        text-shadow: 0px 0px 5px rgb(0, 0, 0);
+        transition: .15s;
+
+    }
+    .dot {
+        color: #fff;
+        display: inline-grid;
+        font-family: Fira Code;
+    }
+
+    .txt {
+        font-family: Source Sans Pro;
+    }
+
+    .name {
+        font-family: Commissioner;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    @keyframes wonkyanimation {
+        20% {background-color: aqua; color: rgb(68, 66, 66); transform: rotate(10deg); font-size: 10px;}
+        35% {background-color: rgb(255, 0, 0); color: #fff; transform: rotate(-5deg);}
+        39% {background-color: rgb(0, 255, 76); color: rgb(77, 31, 138); transform: rotate(3deg);}
+    }
+
+    .wonky {
+        animation-name: wonkyanimation;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        width: 250px;
+        height: 20px;
+        border-radius: 10px;
+        opacity: 60%;
+        font-family: "comic sans ms";
+        font-size: 13px;
+        transition: 1s;
+    }
+
+    .file {
+        font-family: Source Sans Pro;
+        border-bottom: 1px solid rgb(43, 43, 43);
+    }
+    .file2 {
+        font-family: Source Sans Pro;
+    }
+    .ftext {
+        display: inline-grid;
+        margin-left: 10px;
+        font-weight: bold;
+    }
+    .fas {
+        display: inline-grid;
+        margin-left: 15px;
+    }
+    .ftextfile {
+        display: inline-grid;
+        margin-left: 14px;
+    }
+    .time {
+        display: inline-grid!important;
+        margin-left: 15px;
+    }
+    .inline {
+        display: inline-grid!important;
+    }
+    .buttons {
+        margin: 20px;
+    }
+    .btn {
+        height: 35px;
+        border-radius: 8px;
+        border: 1px solid rgb(43, 43, 43);
+        background-color: rgb(19, 19, 19);
+        color: rgb(189, 189, 189);
+        font-size: 14px;
+        margin-right: 10px;
+        font-family: Source Sans Pro;
+    }
+    .dropdown {
+        margin-left: 1px;
+        margin-right: 14px;
+        font-size: 12px;
+    }
+    .b10 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .b10-left {
+        padding-left: 20px;
+    }
+    .greenbtn {
+        background-color: rgb(46, 155, 64);
+        border: 1px solid rgb(37, 122, 51);
+        color: #fff;
+        margin-right: 0px;
+    }
+    .btninlign {
+        display: inline-grid!important;
+    }
+    .btnright {
+        display: flex; 
+        justify-content: flex-end;
+        margin-top: -35px;
+    }
+</style>
 
 </head>
 
-<body>
+<body class="body">
 
-    <h1 class="text-xl font-bold ">
-        blueb
-    </h1>
+    <div class="buttons">
+
+        <button class="btn">
+            <i class="fas fa-code-branch branch"></i>
+            main            
+            <i class="fas fa-caret-down dropdown"></i>
+        </button>
+<div class="btnright">
+<div class="btninlign">
+
+    <button class="btn b10">
+        Go to file
+    </button>
+
+</div>
+
+<div class="btninlign">
+
+    <button class="btn b10-left">
+        Add file
+        <i class="fas fa-caret-down dropdown"></i>
+    </button>
+
+</div>
+
+<div class="btninlign">
+
+    <button class="btn b10-left greenbtn" href="https://github.com/blueb442/blueb442.github.io/archive/refs/heads/main.zip">
+        Code
+        <i class="fas fa-caret-down dropdown"></i>
+    </button>
+
+</div>
+
+
+
+</div>
+
+    </div>
+
+    <div class="readme">
+        <div class="filename">
+            <p class="head1" style="font-weight: bold;">blueb442</p>
+            <p class="head1">update README.md</p>
+        </div>
+
+        <div class="file">
+            <i class="fas fa-folder"></i>
+            <p class="ftext">cool stuff</p>
+            <div class="inline infodiv">
+                <p class="time time1">2 hours ago</p>
+            </div>
+        </div>
+
+        <div class="file">
+            <i class="fas fa-folder"></i>
+            <p class="ftext">good resources</p>
+            <div class="inline infodiv">
+                <p class="time time2">9 hours ago</p>
+            </div>
+        </div>
+
+        <div class="file2">
+            <i class="fas fa-file"></i>
+            <p class="ftext ftextfile">README.md</p>
+            <div class="inline infodiv">
+                <p class="time time3">4 hours ago</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="readme">
+        <div class="filename">
+            <p class="head1">README.md</p>
+            <div class="divider"></div>
+            <p class="head1 muted">19.3mb</p>
+        </div>
+
+
+        <center>
+            <h1 class="head2">
+                blueb
+            </h1>
+            <p class="subhead2">
+                (and her fabulous works of art)
+            </p>
+
+            <div class="divider2"></div>
+
+            <a class="links" href="https://bit.ly/3G9bBpC">
+                sheila (red)
+            </a>
+            <p class="dot">
+                -
+            </p>
+            <a class="links" href="https://github.com/blueb442/purpura">
+                purpura
+            </a>
+            <p class="dot">
+                -
+            </p>
+            <a class="links" href="https://fish-fish-fish.glitch.me/">
+                fish
+            </a>
+            <p class="dot">
+                -
+            </p>
+            <a class="links" href="https://incognitofloorboard.glitch.me">
+                floorboards
+            </a>
+            <p class="dot">
+                -
+            </p>
+            <a class="links" href="https://pizazz-pizza.glitch.me">
+                pizazz
+            </a>
+
+            <p class="txt">
+                hey, im <a class="name" href="https://discord.id/?prefill=403390454273409028">harper,</a> or <a class="name" href="https://discord.id/?prefill=403390454273409028">blueb,</a> or <a class="name" href="https://discord.id/?prefill=403390454273409028">cake arsonist.</a>
+            </p>
+            <p class="txt">
+                i go by <a class="name" href="https://en.pronouns.page/@blueb">she/her</a> and am a <a class="name" href="https://andthatswhywedrink.com/">true crime</a> listener 
+            </p>
+            <p class="txt">
+                i enjoy <a class="name" href="https://en.wikipedia.org/wiki/Front-end_web_development">front-end code,</a> <a class="name" href="https://en.wikipedia.org/wiki/Front-end_web_development">market basket,</a> <a class="name" href="https://discord.com">and discord bots.</a> 
+            </p>
+
+            <p class="txt wonky">
+                ALSO I MAKE SOME FUNNY THINGS
+            </p>
+
+            
+        </center>
+
+    </div>
 
 </body>
